@@ -2,7 +2,18 @@ version = 1
 revision = 2
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "ambikha-cicd",
+    "schemas",
+]
+
 [[package]]
-name = "ambikha"
+name = "ambikha-cicd"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
+
+[[package]]
+name = "schemas"
+version = "0.1.0"
+source = { editable = "schemas" }
