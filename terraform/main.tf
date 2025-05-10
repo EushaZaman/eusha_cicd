@@ -15,13 +15,13 @@ provider "github" {
 resource "github_actions_secret" "registry_url" {
   repository      = var.github_repository
   secret_name     = "REGISTRY_URL"
-  plaintext_value = "ghcr.io/${var.github_owner}/hello-world:latest"
+  plaintext_value = "ghcr.io/${var.github_owner}/app:latest"
 }
 
 resource "null_resource" "container_registry_setup" {
   provisioner "local-exec" {
     command = <<EOT
-      echo "Container registry setup completed - image available at: ghcr.io/${var.github_owner}/hello-world:latest"
+      echo "Container registry setup completed - image available at: ghcr.io/${var.github_owner}/app:latest"
     EOT
   }
 }

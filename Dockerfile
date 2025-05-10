@@ -1,8 +1,8 @@
 # Dockerfile
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY src/app.py .
+COPY src/eusha_cicd/app.py .
 
 CMD ["python", "app.py"]

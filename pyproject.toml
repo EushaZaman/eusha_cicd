@@ -1,12 +1,22 @@
 [project]
-name = "ambikha-cicd"
+name = "eusha-cicd"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pytest>=8.3.5",
+]
 
 [tool.uv.workspace]
 members = [
     "schemas",
+]
+
+[tool.uv.sources]
+eusha-cicd = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "eusha-cicd",
 ]
