@@ -4,7 +4,9 @@ name: Build and Deploy
 on:
   push:
     branches: [ main ]
-
+permissions:
+  contents: read
+  packages: write
 jobs:
   build:
     runs-on: ubuntu-latest
