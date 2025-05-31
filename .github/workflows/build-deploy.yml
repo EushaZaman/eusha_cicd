@@ -29,7 +29,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.eusha_cicd }}/app:latest
+          tags: ghcr.io/EushaZaman/app:latest
 
   terraform:
     needs: build
