@@ -21,14 +21,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           #username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.TOKEN_CODE }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ghcr.io/eusha_cicd/app:latest
+          tags: ghcr.io/eushazaman/app:latest
 
   terraform:
     needs: build
